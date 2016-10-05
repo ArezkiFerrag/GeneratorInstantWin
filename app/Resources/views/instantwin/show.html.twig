@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>InstantWin</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ instantWin.id }}</td>
+            </tr>
+            <tr>
+                <th>Operation</th>
+                <td>{{ instantWin.operation }}</td>
+            </tr>
+            <tr>
+                <th>Winat</th>
+                <td>{% if instantWin.winAt %}{{ instantWin.winAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Iddotation</th>
+                <td>{{ instantWin.idDotation }}</td>
+            </tr>
+            <tr>
+                <th>Idgroup</th>
+                <td>{{ instantWin.idGroup }}</td>
+            </tr>
+            <tr>
+                <th>Iduser</th>
+                <td>{{ instantWin.idUser }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('instantwin_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('instantwin_edit', { 'id': instantWin.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>InstantWin list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Operation</th>
+                <th>Winat</th>
+                <th>Iddotation</th>
+                <th>Idgroup</th>
+                <th>Iduser</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for instantWin in instantWins %}
+            <tr>
+                <td><a href="{{ path('instantwin_show', { 'id': instantWin.id }) }}">{{ instantWin.id }}</a></td>
+                <td>{{ instantWin.operation }}</td>
+                <td>{% if instantWin.winAt %}{{ instantWin.winAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ instantWin.idDotation }}</td>
+                <td>{{ instantWin.idGroup }}</td>
+                <td>{{ instantWin.idUser }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('instantwin_show', { 'id': instantWin.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('instantwin_edit', { 'id': instantWin.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('instantwin_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

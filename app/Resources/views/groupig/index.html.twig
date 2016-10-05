@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>GroupIG list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Operation</th>
+                <th>Startat</th>
+                <th>Endat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for groupIG in groupIGs %}
+            <tr>
+                <td><a href="{{ path('groupig_show', { 'id': groupIG.id }) }}">{{ groupIG.id }}</a></td>
+                <td>{{ groupIG.operation }}</td>
+                <td>{% if groupIG.startAt %}{{ groupIG.startAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if groupIG.endAt %}{{ groupIG.endAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('groupig_show', { 'id': groupIG.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('groupig_edit', { 'id': groupIG.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('groupig_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
