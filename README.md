@@ -1,48 +1,68 @@
-README
-======
+Symfony Standard Edition
+========================
 
-What is Symfony?
------------------
+Welcome to the Symfony Standard Edition - a fully-functional Symfony
+application that you can use as the skeleton for your new applications.
 
-Symfony is a PHP full-stack web framework. It is written with speed and
-flexibility in mind. It allows developers to build better and easy to maintain
-websites with PHP.
+For details on how to download and get started with Symfony, see the
+[Installation][1] chapter of the Symfony Documentation.
 
-Symfony can be used to develop all kind of websites, from your personal blog
-to high traffic ones like Dailymotion or Yahoo! Answers.
+What's inside?
+--------------
 
-Installation
-------------
+The Symfony Standard Edition is configured with the following defaults:
 
-The best way to install Symfony is to use the [official Symfony Installer][7].
-It allows you to start a new project based on the version you want.
+  * An AppBundle you can use to start coding;
 
-Documentation
--------------
+  * Twig as the only configured template engine;
 
-The "[Quick Tour][1]" tutorial gives you a first feeling of the framework. If,
-like us, you think that Symfony can help speed up your development and take
-the quality of your work to the next level, read the official
-[Symfony documentation][2].
+  * Doctrine ORM/DBAL;
 
-Contributing
-------------
+  * Swiftmailer;
 
-Symfony is an open source, community-driven project. If you'd like to contribute,
-please read the [Contributing Code][3] part of the documentation. If you're submitting
-a pull request, please follow the guidelines in the [Submitting a Patch][4] section
-and use [Pull Request Template][5].
+  * Annotations enabled for everything.
 
-Running Symfony Tests
-----------------------
+It comes pre-configured with the following bundles:
 
-Information on how to run the Symfony test suite can be found in the
-[Running Symfony Tests][6] section.
+  * **FrameworkBundle** - The core Symfony framework bundle
 
-[1]: https://symfony.com/get_started
-[2]: https://symfony.com/doc/current/
-[3]: https://symfony.com/doc/current/contributing/code/index.html
-[4]: https://symfony.com/doc/current/contributing/code/patches.html#check-list
-[5]: https://symfony.com/doc/current/contributing/code/patches.html#make-a-pull-request
-[6]: https://symfony.com/doc/master/contributing/code/tests.html
-[7]: https://symfony.com/doc/current/book/installation.html#installing-the-symfony-installer
+  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
+    template and routing annotation capability
+
+  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+
+  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+
+  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
+    component
+
+  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
+    sending emails
+
+  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+
+  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
+    the web debug toolbar
+
+  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
+    configuring and working with Symfony distributions
+
+  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
+    capabilities
+
+  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
+    integration
+
+All libraries and bundles included in the Symfony Standard Edition are
+released under the MIT or BSD license.
+
+Enjoy!
+
+[1]:  https://symfony.com/doc/2.8/book/installation.html
+[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+[7]:  https://symfony.com/doc/2.8/book/doctrine.html
+[8]:  https://symfony.com/doc/2.8/book/templating.html
+[9]:  https://symfony.com/doc/2.8/book/security.html
+[10]: https://symfony.com/doc/2.8/cookbook/email.html
+[11]: https://symfony.com/doc/2.8/cookbook/logging/monolog.html
+[13]: https://symfony.com/doc/2.8/bundles/SensioGeneratorBundle/index.html
