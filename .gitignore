@@ -1,0 +1,28 @@
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+web/javascripts/
+web/stylesheets/
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+
+# Composer files
+composer.phar
+composer.lock
+
+# IDE specificities
+# Netbean
+nbproject/
+# Gedit
+*~
+# Eclipse
+.project
+.settings/org.eclipse.php.core.prefs
