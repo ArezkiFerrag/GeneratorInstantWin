@@ -1,0 +1,2 @@
+# GeneratorInstantWin
+Generate instant win
